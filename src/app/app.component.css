@@ -1,0 +1,134 @@
+/* ===========================
+   Base Layout
+=========================== */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.mode-toggle:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Inputs and Buttons
+=========================== */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ===========================
+   Dark Mode Styles
+=========================== */
+.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+.dark-mode .form-container {
+  background-color: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode input:focus {
+  border-color: #66b2ff;
+  box-shadow: 0 0 6px rgba(102, 178, 255, 0.5);
+}
+
+.dark-mode label {
+  color: #ccc;
+}
+
+.dark-mode button[type="submit"] {
+  background-color: #66b2ff;
+  color: #000;
+}
+
+.dark-mode button[type="submit"]:hover {
+  background-color: #3399ff;
+}
+
+.dark-mode .mode-toggle {
+  color: #66b2ff;
+}
