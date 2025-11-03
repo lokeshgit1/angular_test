@@ -1,101 +1,13 @@
-<div class="container" [class.dark-mode]="isDarkMode">
-  <div class="form-container">
-    <div class="header">
-      <h2>Address Form</h2>
-      <button class="mode-toggle" (click)="toggleMode()">
-        {{ isDarkMode ? '☀️   ' : '🌙   ' }}
-      </button>
-    </div>
+<div class="navbar" [class.dark-mode]="isDarkMode">
+  <div class="nav-links">
+    <button routerLink="/good" routerLinkActive="active">Good</button>
+    <button routerLink="/loki" routerLinkActive="active">Loki</button>
+  </div>
 
-    <form (ngSubmit)="handleSubmit()" #addressForm="ngForm">
-      <label for="name">Full Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        [(ngModel)]="formData.name"
-        placeholder="Enter your full name"
-        required
-      />
-
-      <label for="phone">Phone Number:</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        [(ngModel)]="formData.phone"
-        placeholder="Enter your phone number"
-        pattern="[0-9]{10}"
-        title="Enter a valid 10-digit phone number"
-        required
-      />
-
-      <label for="flat">Flat / House No:</label>
-      <input
-        type="text"
-        id="flat"
-        name="flat"
-        [(ngModel)]="formData.flat"
-        placeholder="Enter flat or house number"
-        required
-      />
-
-      <label for="city">City:</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        [(ngModel)]="formData.city"
-        placeholder="Enter your city"
-        required
-      />
-
-      <button [hidden]="displaySubmitButton" type="submit" [disabled]="!addressForm.form.valid">Submit</button>
-      <p style="margin-top:10px; color: green; font-weight: bold;">
-        {{msg}}
-      </p>
-    </form>
-
-    <div>
-      <!-- <button [hidden]="!showButton" >Testing Button</button> -->
-      <button (click)="toggleColor()" [style.backgroundColor]="colorName">Testing Button</button>
-       <!-- 👇 This will show the message on the page -->
-  <p  style="margin-top:10px; color: green; font-weight: bold;">
-    {{ message }}
-  </p>
-
-  
-
-    </div>
-     <div>
-  <ul>
-    <div *ngFor="let student of studentData">
-      <li *ngIf="student.age < 30">
-        Name: {{student.name}}, Age: {{student.age}}, Grade: {{student.grade}}
-      </li>
-    </div>
-  </ul>
+  <!-- 🌗 Theme Toggle Button -->
+  <button class="theme-toggle" (click)="toggleTheme()">
+    {{ isDarkMode ? '☀️' : '🌙' }}
+  </button>
 </div>
-  </div>
- 
 
-
-</div>  
-<!-- Conditional Sections -->
-<div *ngIf="localPeople; then usa; else china"></div>
-
-<ng-template #usa>
-  <div class="section-card">
-    <h3>🇺🇸 USA Section</h3>
-    <p>This section is for USA.</p>
-  </div>
-</ng-template>
-
-<ng-template #china>
-  <div class="section-card">
-    <h3>🇨🇳 China Section</h3>
-    <p>This section is for China.</p>
-  </div>
-</ng-template>
-<!-- End of Conditional Sections -->
-
+<router-outlet></router-outlet>
