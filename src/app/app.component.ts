@@ -15,6 +15,7 @@ export class AppComponent {
     flat: '',
     city: ''
   };
+  
   colorName: string = "red";
   message: string = "";
   msg: string = "";
@@ -34,8 +35,16 @@ export class AppComponent {
     Flat/House No: ${this.formData.flat}
     City: ${this.formData.city}
     
-    ✅ Your address is submitted successfully!
-  `;
+    ✅ Your address is submitted successfully!`;
+    
+   // 👇 Reset the form fields
+  this.formData = {
+    name: '',
+    phone: '',
+    flat: '',
+    city: ''
+  };
+
 
   }
   toggleColor(){
