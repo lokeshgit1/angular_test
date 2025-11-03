@@ -111,7 +111,7 @@ button[type="submit"]:hover {
 .dark-mode .form-container {
   background-color: #1e1e1e;
   color: #fff;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 6px 20px rgba(255,255,255,0.05);
 }
 
 .dark-mode input {
@@ -173,4 +173,50 @@ li:hover {
 
 .dark-mode li:hover {
   background: #333;
+}
+
+/* ===========================
+   Local People / USA / China Sections
+=========================== */
+.section-card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.section-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.section-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 8px 0 0;
+}
+
+.section-card:hover {
+  transform: translateY(-3px);
+  background: #f0f8ff;
+}
+
+/* Dark mode adjustments */
+.dark-mode .section-card {
+  background: #1e1e1e;
+  color: #eaeaea;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.dark-mode .section-card h3 {
+  color: #66b2ff;
+}
+
+.dark-mode .section-card p {
+  color: #ccc;
 }

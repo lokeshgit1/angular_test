@@ -78,17 +78,24 @@
 </div>
   </div>
  
+
+
+</div>  
+<!-- Conditional Sections -->
 <div *ngIf="localPeople; then usa; else china"></div>
 
 <ng-template #usa>
-  <h3>USA Section</h3>
-  <p>This section is for USA.</p>
+  <div class="section-card">
+    <h3>🇺🇸 USA Section</h3>
+    <p>This section is for USA.</p>
+  </div>
 </ng-template>
 
 <ng-template #china>
-  <h3>China Section</h3>
-  <p>This section is for China.</p>
+  <div class="section-card">
+    <h3>🇨🇳 China Section</h3>
+    <p>This section is for China.</p>
+  </div>
 </ng-template>
-
-</div>  
+<!-- End of Conditional Sections -->
 
